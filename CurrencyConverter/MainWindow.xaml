@@ -1,0 +1,63 @@
+﻿<Window x:Class="CurrencyConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CurrencyConverter"
+        Title="Currency converter"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        MouseDown="OnWindowMouseDown"
+        Topmost="{Binding IsAlwaysOnTop}"
+        FontFamily="Segoe UI Light">
+
+  <Grid Margin="10">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+
+      <RowDefinition Height="10"/>
+
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+
+      <RowDefinition Height="10"/>
+
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <TextBlock Grid.Row="0"
+               Text="Icelandic Krona (ISK)" FontFamily="Segoe UI Light" FontSize="16" Foreground="Gray"
+               VerticalAlignment="Center" Margin="5"/>
+
+    <StackPanel Grid.Row="1" Margin="5,0,5,5" TextElement.FontSize="16" Orientation="Horizontal">
+      <TextBox x:Name="m_isk" Width="75"
+               HorizontalAlignment="Left" VerticalAlignment="Center"
+               TextChanged="OnIskChanged"/>
+      <TextBlock Text="kr" VerticalAlignment="Center" Margin="2,0,0,0"/>
+    </StackPanel>
+
+    <TextBlock Grid.Row="3"
+               Text="Euro (EUR)" FontFamily="Segoe UI Light" FontSize="16" Foreground="Gray"
+               VerticalAlignment="Center" Margin="5"/>
+
+    <StackPanel Grid.Row="4" Margin="5,0,5,5" TextElement.FontSize="16" Orientation="Horizontal">
+      <TextBox x:Name="m_eur" Width="75"
+               HorizontalAlignment="Left" VerticalAlignment="Center"
+               TextChanged="OnEurChanged"/>
+      <TextBlock Text="€" VerticalAlignment="Center" Margin="2,0,0,0"/>
+    </StackPanel>
+
+    <TextBlock Grid.Row="6"
+               Text="Canadian Dollar (CAD)" FontFamily="Segoe UI Light" FontSize="16" Foreground="Gray"
+               VerticalAlignment="Center" Margin="5"/>
+
+    <StackPanel Grid.Row="7" Margin="5,0,5,5" TextElement.FontSize="16" Orientation="Horizontal">
+      <TextBox x:Name="m_cad" Width="75"
+               HorizontalAlignment="Left" VerticalAlignment="Center"
+               TextChanged="OnCadChanged"/>
+      <TextBlock Text="$" VerticalAlignment="Center" Margin="2,0,0,0"/>
+    </StackPanel>
+
+  </Grid>
+</Window>
