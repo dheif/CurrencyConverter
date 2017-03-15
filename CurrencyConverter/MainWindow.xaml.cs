@@ -8,6 +8,9 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using Newtonsoft.Json;
 
+using System.Windows.Interop;
+using System.Windows.Media.Imaging;
+
 namespace CurrencyConverter
 {
     public partial class MainWindow
@@ -30,7 +33,9 @@ namespace CurrencyConverter
             DataContext = this;
 
             InitializeComponent();
-
+            
+            //Icon = Imaging.CreateBitmapSourceFromHIcon(Properties.Resource.Cookie.Handle, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+            
             this.Left = Properties.Settings.Default.Left;
             this.Top = Properties.Settings.Default.Top;
 

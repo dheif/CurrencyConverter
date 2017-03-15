@@ -10,6 +10,12 @@
         Topmost="{Binding IsAlwaysOnTop}"
         FontFamily="Segoe UI Light">
 
+  <Window.ContextMenu>
+    <ContextMenu>
+      <MenuItem Header="Always on top" IsCheckable="True" IsChecked="{Binding IsAlwaysOnTop}"/>
+    </ContextMenu>
+  </Window.ContextMenu>
+  
   <Grid Margin="10">
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto"/>
