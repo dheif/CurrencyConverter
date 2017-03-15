@@ -166,5 +166,10 @@ namespace CurrencyConverter
 
             m_isConverting = false;
         }
+
+        private void OnCloseClicked(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
