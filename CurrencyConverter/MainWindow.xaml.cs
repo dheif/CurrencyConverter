@@ -158,7 +158,7 @@ namespace CurrencyConverter
             m_isConverting = true;
 
             double cad;
-            if (double.TryParse(m_isk.Text, out cad))
+            if (double.TryParse(m_cad.Text, out cad))
             {
                 m_isk.Text = (cad * 1 / Properties.Settings.Default.IsktoCad).ToString("N2");
                 m_eur.Text = (cad * 1 / Properties.Settings.Default.EurToCad).ToString("N2");
